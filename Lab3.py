@@ -27,6 +27,10 @@ if whole_pizzas>=10: # If theres more than 10 WHOLE pizzas add a discount on piz
 if salads>10: # If theres more than 10 salads, add a discount salads
   salads_discount= salads_total*discount
 total=pizza_total+salads_total
+#Delivery logic:
+# The delivery must be at least 20 dollars
+if total*.07>delivery:
+  delivery=total*.07
 total_discount=salads_discount+pizza_discount
 print(f"Whole Pizzas: {whole_pizzas}")
 print("Pizza cost: ",pizza_total)
